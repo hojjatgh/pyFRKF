@@ -1,2 +1,8 @@
 # FRKF
-Python library for fast and robust Kalman filter algorithms
+Python library for fast and robust Kalman filter algorithms:
+
+- SpecKF
+- MCSKF
+- CSKF
+- RFC
+- HiKF
