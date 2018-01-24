@@ -6,3 +6,5 @@ Python library for fast and robust Kalman filter algorithms:
 - CSKF
 - RFC
 - HiKF
+- EnKF
+- KF
