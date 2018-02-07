@@ -28,3 +28,10 @@ This library includes the following Fast and Robust Kalman Filter algorithms:
 
 
 <img width="540" alt="screen shot 2018-02-07 at 11 54 43 am" src="https://user-images.githubusercontent.com/7990350/35938453-fd317d06-0bfd-11e8-93a0-475e2219617e.png">
+
+
+
+## Quick Start Guide
+
+
+## Bathymetry example
