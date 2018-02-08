@@ -35,3 +35,6 @@ This library includes the following Fast and Robust Kalman Filter algorithms:
 
 
 ## Bathymetry example
+
+
+![image](https://user-images.githubusercontent.com/7990350/35986974-652596d4-0caf-11e8-9596-68ba2792f349.png)
