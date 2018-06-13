@@ -99,7 +99,7 @@ params = {}
 params['parallel'] = True
 rank = 12
 prob = CSKF(forward_model, observation_model, initial_dist, params, H, nx, n_step, rank, lin=lin,true_sol=ref_bathy, R=R, Q=Q, P=P, obs=obs)
-results, uncert = prob.CSKF_main()
+results, uncert = prob.Run()
 print("length result is and each value has %d elements" %len(uncert[0]))
 print(results[1].shape)
 print(uncert[0].shape)
