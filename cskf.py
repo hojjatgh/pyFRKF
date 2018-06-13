@@ -134,6 +134,7 @@ class CSKF:
         print("    Number of principle components         :  %d" %(self.rank))
         print("    Number of observations                 :  %d" %(self.R.shape[0]))
         print("    Number of CPU cores                    :  %d" %(self.ncores))
+        print(self.obs.shape)
         
 
 
@@ -246,7 +247,7 @@ class CSKF:
         # generate measurements without noise
         y = self.forward_run(true_sol)
         hy = self.observation_model(y, self.H, self.lin)
-        hy = hy.reshape(-1,1)
+        hy = hy.reshape((-1,1))
         obs = np.zeros((n, n_step))
         if noise:
             for i in range(n_step):
@@ -255,7 +256,7 @@ class CSKF:
             obs = np.tile(hy, (1, n_step))
 
         return obs
-
+        
 
     def CovarianceMatrix(self, grid=None, kernel='Gaussian', beta = None):
         ### Construct covariance matrix
@@ -415,7 +416,13 @@ class CSKF:
         rank = self.rank
         method = 'SVD'
         U, C_p, C_q = self.compute_low_rank(rank, method)
-        #savemat('U.mat',{'U':self.U, 'C_p':C_p, 'C_q':C_q })
+        self.U = U
+        self.C_p = C_p
+        self.C_q = C_q
+        end = time()
+        print("Computing the low rank approximation takes %f seconds"%(end-start))
+        savemat('U.mat',{'U':self.U, 'C_p':C_p, 'C_q':C_q })
+        
         #data = loadmat('U.mat', squeeze_me=True)
         #self.U = data['U']  
         #self.C_p = data['C_p']
