@@ -13,7 +13,7 @@ class CSKF:
         
     """
             Find the optimal estimate for the inversion problem with the given 
-            noisy set of observation and the approximate forward model 
+            noisy set of observations and the approximate forward model 
     """
 
     def __init__(self, forward_model, observation_model, initial_dist, params, H, nx, n_step, rank, trend=None,true_sol = None, grid = None, R = None, Q = None, P = None, obs = None, lin = None):
