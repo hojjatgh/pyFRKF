@@ -2,7 +2,7 @@
 
 This is a Python library of data assimilation and optimization methods developed to solve large-scale state-parameter estimation problems. Data assimilation approach has been widely used in geophysics, hydrology and numerical weather forecast to improve the forecast from a numerical model based on data sets collected in real time. Conventional approach like Kalman filter is computatioanlly prohibitive for large problems. The FRKF library takes advantage of techniques such as Principle Component Analysis (PCA), Fast Linear Algebra, and utilizing cross-covariance matrices to develop Fast and Robust data assimilation approach that is scalable for large-scale problems. The functions and examples are produced based on collabrated work on data assimialtion documented in the papers listed in the Reference section.
 
-# This is an ongoing project!
+# This is an ongoing project! Will be updated.
 
 This library includes the following Fast and Robust Kalman Filter algorithms:
 
